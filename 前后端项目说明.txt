@@ -1,0 +1,46 @@
+## 平台简介
+本项目基于若依，若依官网：https://gitee.com/y_project/RuoYi-Vue
+前端项目目录：interview-client-h5-by-vpn
+后端项目目录：interview-server-by-vpn
+项目文档目录：interview-server-by-vpn/doc，数据库脚本目录: interview-server-by-vpn/sql
+
+## 券相关功能模块是使用 PowerDesigner 进行设计，原设计文档：interview-server-by-vpn/doc/券功能表结构设计.pdm
+
+## 券与用户、及订单的关联关系说明
+t_order（订单表）一个订单只能属于一个投保人（即购买人）；
+t_order_detail（订单详情表），订单与订单详情是1对多的关系，订单详情记录的是被保险人信息；
+t_ticket_code（权益码），订单详情与权益码是1对多的关系；权益码可用于线上实体店消费；
+
+## 后端项目运行
+Ctrl + Shift + N 打开 RuoYiApplication，运行 main 方法
+
+
+# 前端项目说明：
+前端项目基于 uni-app，必须使用 HBuilder 工具运行。HBuilder 官网：https://www.dcloud.io/hbuilderx.html
+# 前端项目运行步骤：
+1、使用 HBuilder 打开项目
+2、运行 -> 运行到浏览器
+3、登录
+
+# 要求：
+1、编码应符合一定的开发规范，如：阿里巴巴Java开发手册终极版
+2、完成的机试代码 zip 压缩，文件名为“2025年-姓名-机试代码-A982.zip”发我邮箱 tanshunfu@jorchi.com
+
+# 开发任务：
+1、右下角菜单 -> 我的 -> 在“应用设置”的下面，添加一个“权益券”的菜单项
+跳转路由为：/pages/app/valueAdded
+
+2、在权益权页面：http://localhost:9090/#/pages/app/valueAdded
+点击一个服务商类型，把后端返回的权益券列表加载到页面
+
+3、点击“复制按钮”时，把权益码复制到剪贴板，并提示“复制成功”
+
+4、根据点击的服务商类型，打开服务商的超链接地址（前后端均需要自己开发，可参考券列表接口）。
+服务商类型（1是健康科普，2是口腔，3是购药，4是早筛，5是问诊，6是重疾，7是基因检测）
+
+5、点“健康科普”时，不需要跳转到券列表，直接跳转到健康科普的超链接地址
+
+6、附加题：把权益码显示为条形码（类型于商品的条形码）
+
+
+
